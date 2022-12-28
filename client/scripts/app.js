@@ -19,17 +19,28 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
+    $('.username').on('click', function (event) {
+      console.log($(event));
+    });
+
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
+
+    // var step = () => {
+    //   setTimeout(function() {
+    //     MessagesView.render();
+    //     step();
+    //   }, 5000);
+    // };
+
+    // step();
   },
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
-      // examine the response from the server request:
-      console.log(data);
-
-      // TODO: Use the data to update Messages and Rooms
-      // and re-render the corresponding views.
+      for (let i = 0; i < data.length; i++) {
+        MessagesView.renderMessage(data[i]);
+      }
     });
   },
 

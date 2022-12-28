@@ -5,9 +5,20 @@
 var Messages = {
 
   // TODO: Define how you want to store your messages.
-  _data: null,
+  _data: [],
 
   // TODO: Define methods which allow you to retrieve from,
   // add to, and generally interact with the messages.
+  retrieve: function(username) {
+    var userMessages = [];
+    // search _data for all messages from username
+    // if it matches
+    // push the current message into userMessages
 
+    return userMessages;
+  },
+
+  add: function(message) {
+    _data.push(message);
+  }
 };

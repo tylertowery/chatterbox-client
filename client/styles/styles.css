@@ -59,17 +59,23 @@ form input[type=text] {
     padding: 5px;
 }
 
-.chat {
+.chats {
     padding: 5px;
     margin-bottom: 5px;
     background-color: #eee;
 }
 
-.chat .username {
-    font-weight: 800;
+.friend {
+    color: #fff;
+    background-color: #0090da;
 }
 
-.chat:hover {
+.username {
+    font-weight: 800;
+    display: inline;
+}
+
+.chats:hover {
     background-color: #ddd;
 }
 
@@ -83,8 +89,20 @@ form input[type=text] {
     padding: 10px;
 }
 
-.friend {
-    color: #fff;
-    background-color: #0090da;
+.message {
+    border:#0090da solid 3px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
+.github_handle {
+    color: red;
+    display: inline;
+    padding: 10px;
+}
+
+.roomname {
+    color: gray;
+    padding: 10,0px;
+    display: inline;
+}
